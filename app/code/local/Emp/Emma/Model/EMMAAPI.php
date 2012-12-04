@@ -65,28 +65,30 @@ class Emp_Emma_Model_EMMAAPI {
      
 	function __construct($account_id='1704248',$username='d1c9d3274dc785d7a01d',$password='2492601aa6c661fdec8f'){
 
+    function __construct($account_id='',$username='',$password=''){
+
     if( empty($account_id) )
       return false;
     // Save account ID to class object variable
-    $this->emma_account_id = '1704248';
-    $this->emma_username =  'd1c9d3274dc785d7a01d';
-    $this->emma_password =  '2492601aa6c661fdec8f';
+    $this->emma_account_id = $account_id;
+    $this->emma_username =  $username;
+    $this->emma_password =  $password;
     // Use the username and password that is associated with your selected account
     // If you'd like, you can include these from a separate file. You may have multiple
     // acccounts which can be selected by sending in the account_id when the class
     // object is created.
     /*switch($account_id){
-      case '1704248':
-        $this->emma_username = '9d93ee278f032a01ac2c';
-        $this->emma_password = '3650d197aba5ca4e6756';
+      case '':
+        $this->emma_username = '';
+        $this->emma_password = '';
         break;
-      case '7654321':
-        $this->emma_username = 'asdfasdfasdfasdfasdf';
-        $this->emma_password = 'fdsafdsafdsafdsafdsa';
+      case '':
+        $this->emma_username = '';
+        $this->emma_password = '';
         break;
       default:
-        $this->emma_username = 'asdfasdfasdfasdfasdf';
-        $this->emma_password = 'fdsafdsafdsafdsafdsa';
+        $this->emma_username = '';
+        $this->emma_password = '';
         break;
     }*/
 	}
