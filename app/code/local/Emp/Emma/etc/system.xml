@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <emmasection translate="label" module="emma">
+        <class>separator-top</class>
+            <label>Emma Settings</label>
+            <tab>customer</tab>
+            <sort_order>130</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <emma translate="label">
+                    <label>Edit Emma Settings</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                          <emma_password translate="label">
+                            <label>Private API Key</label>
+							<frontend_type>password</frontend_type>
+                            <comment>Password/Private Key for your Emma API. </comment>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </emma_password>                             
+                          <emma_username translate="label">
+                            <label>Public API Key</label>
+                            <comment>Username/Public Key for your Emma API.</comment>
+							<frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </emma_username>                          
+                          <emma_api_key translate="label">
+                            <label>Account ID</label>
+                            <comment>The API key for your Emma account.</comment>
+							<frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </emma_api_key>                          
+                    </fields>
+                </emma>
+                </groups>
+            </emmasection>
+    </sections>
+</config>
