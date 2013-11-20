@@ -62,8 +62,6 @@ class Emp_Emma_Model_EMMAAPI {
 	 * @param string $account_id The Emma Account ID on which to perform actions
 	 * @return boolean false if $account_id is not provided
 	 **/
-     
-	function __construct($account_id='1704248',$username='d1c9d3274dc785d7a01d',$password='2492601aa6c661fdec8f'){
 
     function __construct($account_id='',$username='',$password=''){
 
@@ -295,7 +293,7 @@ class Emp_Emma_Model_EMMAAPI {
 	 * Get a basic listing of all active member groups for a single account.
 	 *
 	 * @param string $group_types Accepts a comma-separated string with one or more of the
-	 * following group_types: ‘g’ (group), ‘t’ (test), ‘h’ (hidden), ‘all’ (all). Defaults to ‘g’
+	 * following group_types: ï¿½gï¿½ (group), ï¿½tï¿½ (test), ï¿½hï¿½ (hidden), ï¿½allï¿½ (all). Defaults to ï¿½gï¿½
 	 * @return string|array API request results
 	 *
 	 **/
@@ -403,7 +401,7 @@ class Emp_Emma_Model_EMMAAPI {
 	 * Remove ALL members from a single active member group.
 	 *
 	 * @param integer $group_id required, identifier that you would like to use to reference the group
-	 * @param string $member_status_id  Optional. This is ‘a’ctive, ‘o’ptout, or ‘e’error.
+	 * @param string $member_status_id  Optional. This is ï¿½aï¿½ctive, ï¿½oï¿½ptout, or ï¿½eï¿½error.
 	 * @return string|array API request results
 	 *
 	 **/
@@ -417,7 +415,7 @@ class Emp_Emma_Model_EMMAAPI {
 	 * Remove all members from all active member groups as a background job. The member_status_id parameter must be set.
 	 *
 	 * @param integer $group_id required, identifier that you would like to use to reference the group
-	 * @param string $member_status_id  Required. This is ‘a’ctive, ‘o’ptout, or ‘e’error.
+	 * @param string $member_status_id  Required. This is ï¿½aï¿½ctive, ï¿½oï¿½ptout, or ï¿½eï¿½error.
 	 * @return string|array API request results
 	 *
 	 **/
@@ -432,7 +430,7 @@ class Emp_Emma_Model_EMMAAPI {
 	 *
 	 * @param integer $from_group_id A unique Group ID
  	 * @param integer $to_group_id A unique Group ID
-	 * @param string $member_status_id  Required. This is ‘a’ctive, ‘o’ptout, or ‘e’error.
+	 * @param string $member_status_id  Required. This is ï¿½aï¿½ctive, ï¿½oï¿½ptout, or ï¿½eï¿½error.
 	 * @return string|array API request results
 	 *
 	 **/
@@ -449,14 +447,14 @@ class Emp_Emma_Model_EMMAAPI {
 	/**
 	 * Get information about current mailings.
 	 *
-	 * @param  boolean $include_archived Accepts “true”. All other values are False. Optional flag
+	 * @param  boolean $include_archived Accepts ï¿½trueï¿½. All other values are False. Optional flag
 	 * to include archived mailings in the list.
 	 * @param string $mailing_types Accepts a comma-separated string with one or more of the following
-	 * mailing types: ‘m’ (regular), ‘t’ (test), ‘r’ (trigger). Defaults to ‘m,t’, standard and test
+	 * mailing types: ï¿½mï¿½ (regular), ï¿½tï¿½ (test), ï¿½rï¿½ (trigger). Defaults to ï¿½m,tï¿½, standard and test
 	 * mailings, when none are specified.
 	 * @param string $mailing_statuses Accepts a comma-separated string with one or more of the
-	 * following mailing statuses: ‘p’ (pending), ‘a’ (paused), ‘s’ (sending), ‘x’ (canceled),
-	 * ‘c’ (complete), ‘f’ (failed). Defaults to ‘p,a,s,x,c,f’, all statuses, when none are specified.
+	 * following mailing statuses: ï¿½pï¿½ (pending), ï¿½aï¿½ (paused), ï¿½sï¿½ (sending), ï¿½xï¿½ (canceled),
+	 * ï¿½cï¿½ (complete), ï¿½fï¿½ (failed). Defaults to ï¿½p,a,s,x,c,fï¿½, all statuses, when none are specified.
 	 * @param boolean $is_scheduled Mailings that have a scheduled timestamp.
 	 * @return string|array API request results
 	 *
@@ -501,7 +499,7 @@ class Emp_Emma_Model_EMMAAPI {
 	 *
 	 * @param integer $mailing_id A unique Mailing ID
 	 * @param integer $member_id A unique Member ID
-	 * @param string $type Accepts: ‘all’, ‘html’, ‘plaintext’, ‘subject’. Defaults to ‘all’, if not provided.
+	 * @param string $type Accepts: ï¿½allï¿½, ï¿½htmlï¿½, ï¿½plaintextï¿½, ï¿½subjectï¿½. Defaults to ï¿½allï¿½, if not provided.
 	 * @return string|array API request results
 	 *
 	 **/
@@ -524,7 +522,7 @@ class Emp_Emma_Model_EMMAAPI {
 
 	/**
 	 * Update status of a current mailing This method can be used to control the progress of a mailing
-	 * by pausing, canceling or resuming it. Once a mailing is canceled it can’t be resumed, and will
+	 * by pausing, canceling or resuming it. Once a mailing is canceled it canï¿½t be resumed, and will
 	 * not show in the normal mailing_list output.
 	 *
 	 * @param integer $mailing_id A unique Mailing ID
@@ -743,7 +741,7 @@ class Emp_Emma_Model_EMMAAPI {
 	 *
 	 * @param array $member_ids An array of Emma-assigned Member IDs
 	 * @param string $status_to The new status for the given members
-	 * Accepts one of ‘a’, ‘e’, ‘o’ (active, error, optout).
+	 * Accepts one of ï¿½aï¿½, ï¿½eï¿½, ï¿½oï¿½ (active, error, optout).
 	 * @return string|array API request results
 	 **/
 	function update_members_status($member_ids, $status_to){
@@ -754,12 +752,12 @@ class Emp_Emma_Model_EMMAAPI {
 	}
 
 	/**
-	 * Update a single member’s information.
+	 * Update a single memberï¿½s information.
 	 *
 	 * @param string $member_id A unique Emma-assigned Member ID
 	 * @param string $email Email address of member to add or update
 	 * @param string $status_to The new status for the given members
-	 * Accepts one of ‘a’, ‘e’, ‘o’ (active, error, optout).
+	 * Accepts one of ï¿½aï¿½, ï¿½eï¿½, ï¿½oï¿½ (active, error, optout).
  	 * @param array $fields Names and values of user-defined fields to update
 	 * @return string|array API request results
 	 **/
@@ -822,7 +820,7 @@ class Emp_Emma_Model_EMMAAPI {
 	/**
 	 * Delete all members
 	 *
-	 * @param string $member_status_id This is ‘a’ctive, ‘o’ptout, or ‘e’error
+	 * @param string $member_status_id This is ï¿½aï¿½ctive, ï¿½oï¿½ptout, or ï¿½eï¿½error
 	 * @return string|array API request results
 	 **/
 	function remove_all_members($member_status_id){
@@ -899,7 +897,7 @@ class Emp_Emma_Model_EMMAAPI {
 	}
 
 	/**
-	 * Update an import record to be marked as ‘deleted’.
+	 * Update an import record to be marked as ï¿½deletedï¿½.
 	 *
 	 * @param string $import_id A unique Import ID
 	 * @return string|array API request results
@@ -913,7 +911,7 @@ class Emp_Emma_Model_EMMAAPI {
 	 * Copy all account members of one or more statuses into a group.
 	 *
  	 * @param integer $group_id A unique Group ID
-	 * @param array $member_status_id This is an array containing ‘a’ctive, ‘o’ptout, and/or ‘e’error.
+	 * @param array $member_status_id This is an array containing ï¿½aï¿½ctive, ï¿½oï¿½ptout, and/or ï¿½eï¿½error.
 	 * @return string|array API request results
 	 *
 	 **/
@@ -926,8 +924,8 @@ class Emp_Emma_Model_EMMAAPI {
 	/**
 	 * Update the status for a group of members, based on their current status
 	 *
-	 * @param string $status_from  This is ‘a’ctive, ‘o’ptout, and/or ‘e’error.
-	 * @param string $status_to  This is ‘a’ctive, ‘o’ptout, and/or ‘e’error.
+	 * @param string $status_from  This is ï¿½aï¿½ctive, ï¿½oï¿½ptout, and/or ï¿½eï¿½error.
+	 * @param string $status_to  This is ï¿½aï¿½ctive, ï¿½oï¿½ptout, and/or ï¿½eï¿½error.
  	 * @param integer $group_id A unique Group ID
 	 * @return string|array API request results
 	 *
@@ -1268,7 +1266,7 @@ class Emp_Emma_Model_EMMAAPI {
 	 *
 	 * @param string $name A descriptive name for the trigger.
 	 * @param string $event_type The type of event that causes this trigger to fire.
-	 * Accepts one of ‘s’, ‘c’, ‘u’, ‘d’, ‘r’ (signup, click, survey, date, recurring date).
+	 * Accepts one of ï¿½sï¿½, ï¿½cï¿½, ï¿½uï¿½, ï¿½dï¿½, ï¿½rï¿½ (signup, click, survey, date, recurring date).
 	 * @param integer $parent_mailing_id The id of the mailing this trigger will use as a template for message generation.
 	 * @param array $groups An optional array of group ids to which this trigger will apply.
 	 * @param array $links An array of link_ids for click triggers.
